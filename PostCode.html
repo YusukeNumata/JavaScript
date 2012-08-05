@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>郵便番号取得</title>
+    <script type="text/javascript">
+      var postcode = {
+        print : function() {
+          var tmp = '';
+          for (var i=0; i<7; i++) {
+            if (i===3) {
+              tmp = tmp + '-';
+            }
+            tmp = tmp + postcode.get();
+          }
+          return tmp;
+        },
+        get : function() {
+          var i = Math.floor(Math.random() * 10);
+          return i;
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.write(postcode.print());
+    </script>
+  </body>
+</html>
